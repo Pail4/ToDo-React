@@ -1,0 +1,99 @@
+@import url(./clear.css);
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+body {
+  background-color: #333;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.block {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  padding: 8px;
+  background-color: #fff;
+  width: 476px;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  margin: 12px auto;
+}
+
+.add-task, .task {
+  margin-bottom: 8px;
+  min-height: 45px;
+  border: 1px solid #989898;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.type-error {
+  border-color: rgba(138, 45, 45, 0.671);
+  background-color: rgba(165, 80, 80, 0.342);
+  transition: 0.2s;
+}
+
+.add-task form {
+  display: flex;
+}
+.add-task form input {
+  font: inherit;
+  border: none;
+  border-radius: inherit;
+  background-color: transparent;
+  padding: 12px;
+  width: 100%;
+}
+.add-task form button {
+  background: url(../cross.svg) no-repeat center;
+  transform: rotate(45deg);
+  width: 13px;
+  height: 13px;
+  margin: 12px;
+}
+
+.task form {
+  display: flex;
+  min-height: inherit;
+  justify-content: space-between;
+  padding: 12px;
+}
+.task input {
+  padding: 2px 12px 0 0;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: 1px solid #998899;
+}
+.task input:checked {
+  background: #C4C4C4;
+}
+.task label {
+  max-width: 370px;
+  margin-right: auto;
+  margin-left: 12px;
+  word-wrap: break-word;
+}
+.task button {
+  border: none;
+  padding: 0;
+  width: 16px;
+  height: 15px;
+  background: url(../cross.svg) no-repeat;
+}
+.task.done {
+  background-color: #F4F4F4;
+}
+
+/*# sourceMappingURL=style.css.map */
