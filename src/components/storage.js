@@ -6,17 +6,20 @@ export const storage = {
     low: []
   },
   save() {
-    Cookies.set('storage', this);
+    Cookies.set('storage', JSON.stringify(this));
   },
-  get() {
+  get(priorirty) {
     try {
       const data = JSON.parse(Cookies.get('storage'))
       
-      for (const key of data){
-        this[key] = data[key];
-      }
+      this.freeId = data.freeId;
+      this.lists.high = data.lists.high
+      this.lists.low = data.lists.low
+      
+
+      return this.lists[priorirty] || [];
     } catch(err) {
-      return;
+      return [];
     }
   }
 }
