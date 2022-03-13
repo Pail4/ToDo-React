@@ -1,8 +1,6 @@
 /* eslint-disable react/prop-types */
 import React, {useState} from "react"
-import { storage } from "./storage";
 
-//ToDo: set changes in storage, create delete task.
 
 export function TaskBody(props) {
   const [isFinished, setIsFinished] = useState(false);
@@ -10,11 +8,6 @@ export function TaskBody(props) {
 
   const onCheckbox = function(){
     setIsFinished(!isFinished)
-
-    console.log(storage.lists[props.priority])
-    // const storageElem = storage.lists[props.priority].find((item) => item.props.id === props.id);
-    // storageElem.props.id = props.id;
-    // console.log(storage.lists[props.id]);
   }
 
   const deleteTask = function(event) {
